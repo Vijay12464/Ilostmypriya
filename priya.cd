@@ -1,0 +1,524 @@
+My self vijaykumar i have around 5 years of experience in it industry that to my relavent experience is 4 years of experience
+in azure devops and azure cloud i have worked on various devops tools like azure repo for version control system maven for
+build tool sonarqube for static code analysics docker for containierization jfrog for stroing the artifacts blockdog for currentization
+testing and we are hosted in azure cloud enviornment and also responsible to set up ci cd for by using dotnet application or java 
+application or angular application and also responsible stup cicd for infratsructure as pass and saas services in azure devops
+i am maintaining everything like i am the onboarding new user in my organization once i added my organization i will added in 
+project level once added in project level developers is pushed the code to main branch after that i created branch for feature branch
+once created  feature branch i need to checkout Azure repo once code is imported then we are creating pipelines we have 2 types of pipelines
+one is classic and one is yaml mostly we are working classic pipeline in need to add agent jobs for example if you are using java application
+we are using mavn build tool once installed ,build and restore,test ,artifcate is generated after then we are going to sonarqube testing for static 
+code analysics firstly goto project settings ->Select service connections ->click new service connection after you installed sonarqube plugins once
+installed sonarqube plugins need to configure sonarqube server url->tokens _>whatever user and project name we need to test once sonarquve testing
+is completed then we are going to deployment groups ->created stages like dev,qa,test,prod we are testing dev and uat ,qa only after my manager and stake holders
+like team teader and manager taker of deployment once done the deployment we are going create new release pipelines once done we are trigger automatically.
+after i submitted my manager ,team lead this is my major roles and responsibilities.
+
+and i have done supporting project also in supporting project the client assigned jira tickets i will working on the tickets like we are using 
+some tools like git ,jenkins,bitbucket,xlr,ansible ,some onboarding tickets ,autosys and i am supporting 24/7 in my support like production and dev deployments.
+i was supporting mail and call support .
+
+Azure devops :  Azure devops for contionus integration and deployment we need to use like build ,test,deployment
+
+we have 5 components:
+
+Azure repo: Version control system under the source code management tool Git
+
+Azure Boards: to tracking work,kanban boards,worklogs ,epics 
+
+Azure Pipelime: creating pipelines and Performing deployment
+
+Azure Test plans : testing the artifacts
+
+Azure Artifacts : to storing the artifacts like NPM,Nuget,Package 
+
+Agent pools:
+
+self hosted agent
+microsoft agent
+
+if you need to deploy azure 
+ then we need to give connection ->project settings->service connections->new service connections->
+ we need give sonarqube,kubernetes,docker and Terraform
+ 
+ Kubernetes :
+ 
+ Kubernetes is an open source containerization tool it is used for automate scalling of deployments
+ 
+ Kubernetes Architecture:
+ 
+ Master node 
+ Worker node
+ Kubectl info
+ Master node:
+ Master node is a indicates controler plant like api server 
+ 
+ 1)API Server
+ 2)scheduler
+ 3)ETCD
+ 4)Replicaset
+ 
+ Api server : api server is a backend server ,rest api server it is used for kubernetes control plant
+ scheduler : scheduler is scheduling the jobs like whatever run the pod and node services 
+ ETCD : key value stored the comnfiguration files 
+ Replicaset: replicaset is a increasing and decresing the pod and nodes running the time
+
+
+Workernode
+Kubeproxy
+kubelet
+Runtime container  
+Pods
+containers
+nodes 
+namespaces
+services 
+pod : pods is smallest exection of deployments 
+containers : we are running on multiple containers in like docker ,kubernetes
+node : node is multiple containers to manage nodes
+namespace:namespaces while we are running on nodes and pods but by defalut we are using namespace
+services: services we are using like when am running omn containers ,node and pod and namespace we are using
+secret :secret is sensitive information like tokens ,key ,users abd passwords ,base 64 code we are using 
+
+Manifeast  file : maniofeast file is one type of Yaml is yet another markup language 
+
+Apiversion:app/v1
+kind: Node/pod/deployment
+app:namespace 
+metadata:
+app:Pod-deployment
+spec:
+replicaset:3
+matchlabels:
+template:
+app:pod-deployment
+metadata:
+spec:
+selectors:
+containers:
+name:ingix
+image:ingix
+port:8081
+type:load balancer 
+
+Secret : secret is a sensitive information like password ,or ssh key 
+
+apiversion:app/v1
+kind:secret
+app:exection-secret
+user:
+username:dfnjkldfjn--base 64
+password:uhdfkjedk---base 64 
+ja
+persistent volueme 
+: persistent volume is a storing the data 
+
+HPA: Horizental pod autoscaller we need to use for storage purpose we are using cpu and memory storage
+
+Commandslist
+for switching one node to another node 
+
+kubectl config use-context <context-name>
+node: node is a checking of pod status or cluster status
+
+kubectl get nodes ----its showing for current status
+kubectl get describe <node><nodename>---detailed about  information for pod or node information
+kubectllogs node nodename -- checking the logs
+
+namespace :namespaces is used for clusers 
+kubectl get namespace<namespacename>--- to list the current status namespaces ,or clusers
+kubectl get describe namespace -----to detailed about information
+kubectl  create namespace <namespacename>---creating for namespace
+kubectl delete namespace <namespacename>----deleting the namespaces
+kubectl logs namespace namespacename ---checking the logs
+
+pods : pod is a smallest exedcution of deployment.
+Kubectl get pods-----to current list the status
+kubectl get describes <pod><podname>------to mdetailed entire information
+kubectl get apply -f<pod><podname> ---while we need to create new pod
+kubectl get delete <pod> <podname>-----deleting the pod name
+
+kubectl exec -it <pod><podname>--- exection of pods 
+kubectl logs<podname> --- checking the logs
+
+deployment : deployment is scalling of pods and node deployments
+kubectl get deployment <deploymentname> ---to check the current status
+kubectl get deployment describe <deploymentname> --- to detailed above information
+kubectl get apply -f <deployment><deployment name>--- creating for new deployment
+kubectl  delete <deployment>|<deploymentname>------deleting the deploymentname
+kubectl  create <deployment>|<deploymentname>------deleting the deploymentname
+kubectl get set image deployment <deploymentname>---its updating the deployment name
+ 
+ services : services using namespaces 
+ 
+ kubectl get service<servicename>----to check the status list
+ kubectl get service <describe servicename> -- to detailed about information
+ kubectl get apply -f <servicename>---- creating the new servicesnamespace
+ kubectl  delete <servicename>--- delete the services
+ 
+ secret :secret is asensitive information like passwords,users,tokens are encrypted
+ kubectl get secret : status
+ kubectl get secret describe <servicename>--- to detailed about information
+ kubectl get apply -f secret <secret name>-- creating the secret name
+ kubectl get delete secret <secretname>-- deleting the secret namespace
+ 
+ persistent Volume:
+ persistent volume is stored kuberntes ,we are using for readwitre access mode
+ kubectl get Pv -- status
+ kubectl get decribe pvname -- information
+ kubectl delete pvc -- delete
+ kubectl create pvc -- create
+ 
+ Docker :Docker is an open soource containerization tool and we are used for while creating the containers and deploying the images
+ 
+ Docker components:
+ 1)docker registry
+ 2)docker hub
+ 3)docker client server
+ 
+ we need to deploy azure devops to azure cloud also 
+ 
+ ->Firstly create subscription and resource group and make sure you create ACR container registry 
+ ->make sure that image already build in that image
+ ->after taht we need to create docker imaages in azure devops and build the trigger
+ ->goto deployment groups create a enviornments
+ ->and goto relese enviornments
+ 
+ docker commandlist
+ 
+ Firstly build the docker file
+ 
+ From node:14
+ Workdir
+ copy files --- from jsonfile
+ install pacakges
+ npm 
+ cmd 
+ 
+ once build the docker file we have run some commands
+ 
+ docker ps --- current status
+ docker ps -a -- stoped container 
+ docker build -n --- build the image form docker registry
+ docker start --- start the docker
+
+ docker stop --- stop the docker
+ docker rm --- remove the docker image
+ docker image imagename -- list the imagees
+ docker create image -- creating the docker image
+ docker delete imagename -- deleteing the image name
+ dockerlogs --- checking the docker logs 
+ 
+ docker networks 
+ 
+ docker network ls -- to list the status
+ docker network create <networkname> --- creating the docker network
+ docker network delete <networkname> deleting the docker networks
+ dockernetworklogs ---- checking the dockerlogs 
+ 
+ docker compose : docker compose is used for multi container applications run on instances 
+ version: '3'
+services:
+  web:
+    image: my-python-app
+    ports:
+
+      - "4000:80"
+    environment:
+      - NAME=World
+  redis:
+    image: "redis:alpine"
+
+ 
+ Terraform :Terraform is an open source infrastrucure as code we need to use automate scalling of deployments
+ 
+ 
+ mainly we are used for main.tf,variables.tf.resources.tf configuration file we are maintained
+ 
+ Sample Script of Terraform :
+ 
+ Providers "azurerm"{ --- Plugins
+ features{}
+ }
+ 
+ 
+ resource "azurerm_resource_group_name" "Example"{
+ name = "NithiyaRaman"
+ location="Krishnagiri"
+ }
+ 
+ resource "azurerm_resource_group_Virtualnetworks" "Example"{
+ name = "NithiyaRaman"
+ location= "Krishnagiri"
+ addressspace[10.0.0.0.16]
+ resource "azurerm_resource_group_Virtualnetworks.Example.name
+ resource "azurerm_resource_group_Virtualnetworks.Example.location
+ }
+ resource "azurerm_resource_group_subnets" "Example"{
+ name ="NithiyaRaman"    16/05/96    6382514648
+ location ="krishnagiri"
+ prefix[10.0.0.0/24]
+ resource "azurerm_resource_group_subnets.Example.name
+ resource "azurerm_resource_group_subnets.Example.location
+ }
+ 
+ Terraform commandslist
+ 
+ terraform taint <resource> <type> <resourcename> ---- we need maintain a specific object
+ terraform untaint <resource> <type> <resourcename> ---- we need damage or deleted or something is we are used
+ terraform init ----- Terraform init is a working directory 
+ terraform plan ---- Terraform plan is execution plan what action is taken terraform file in disered stats
+ terraform apply --- terraform apply is execution of plan and we need to work on configuration file .
+ terraform destroy --- terraform destroy is those we need to delete resource.
+ terraform show --- terraform show is a showing the configuration files 
+ terraform fmt ---format based on used for command
+ terraforms statelist --- we need to used state configuration file 
+ terraform import --- existing configuration will coming on configuration
+ terraform workspace -- we need to show the enviornments
+ terraform workspace Dev,qa --- we need to use for terraform enviornment deploy
+ terraform workspace var= dev,qa --- that we are used for deploying enviornments
+ 
+ Jenkins :
+jenkins is a contionus integration and contiouns deployment tool and we are using like build ,test and deploy purpose we are using.
+
+Jenkins are 2 types of pipelines 
+
+1)declarative pipline
+2)scripted pipline
+
+Firstly we are creating jenkins 
+
+Firstly go to jenkins portal and create new itemps
+
+1)creating a project Example demo i will give 
+2)after we are creating for version control system under the source code management tool once code is cloned
+3)after that i will create pipelines we have 2 types of pipelines
+4)->declarative method 
+-> scripted method
+5)we are using declartive method 
+
+we are writing sample code here
+agent{
+ stges {
+  build ("echo build is successfully completed")
+  }
+  }
+  stage{
+    test ("echo test is successfully completed ")
+	}
+stage{
+      deploy ("echo deploy is successfully completed")
+}	  
+
+once build is trigger and then we are deploying Enviornments 
+
+
+we are followed in this way in that jenkins part 
+
+
+Azure Cloud :
+
+We are using  Azure cloud part like iwas worked on services like Virtual Machines,storage account ,VirtualNetworks,subnets ,load balancer
+,Traffic mannager ,Application gateway ,Azure custmo db,Azure databricks 
+
+Virtual machines : In that virtual machines is process of configuration like install os configuration and patches 
+and storage and networking purpose
+
+Storage account : storage account is a storing the strucrture and unstructure data 
+we have a storage account 4 types 
+1)Blob storage
+2)QUEs storage :message queue
+3)file storage 
+4)table storage
+
+Virtual networks: Virtual networks is private networks it is used for address spaces and networking purpose
+
+Subnets: subnets is used for virtual networks under the subnets we can create multiple subnets in vm
+
+Load balaner :load balancer is aused for maintain the load in the azure 
+
+Traffic mannger : traffic mannager is used for while we need to used for a traffic the load balancer.
+
+Application gateway: application gateway is used for boadbalancer in the traffic enable in the server url and some other things.
+
+Azure databricks : azure databricks is used for ETL process
+
+ARM Temple: 
+
+Arm template is a creating ajson files and templates and maintain a resources and while we need use for creating and update and deleting the templates 
+
+template 
+
+1)schema
+2)paramters
+3)variables
+4)resources 
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "resources
+  ": [
+    {
+      "type": "Microsoft.Network/virtualNetworks",
+      "apiVersion": "2020-06-01",
+      "name": "simpleVNet",
+      "location": "[resourceGroup().location]",
+      "properties": {
+        "addressSpace": {
+          "addressPrefixes": ["10.0.0.0/16"]
+        },
+        "subnets": [
+          {
+            "name": "simpleSubnet",
+            "properties": {
+              "addressPrefix": "10.0.0.0/24"
+            }
+          }
+        ]
+      }
+
+ 
+AKS 
+
+ Create AKS Cluster
+
+Create an AKS cluster:
+az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 1 --enable-addons monitoring --generate-ssh-keys
+Step 4: Configure kubectl to Connect to Your AKS Cluster
+
+Get the credentials for your AKS cluster:
+az aks get-credentials --resource-group myResourceGroup --name myAKSCluster
+Step 5: Deploy an Application
+
+Create a deployment:
+kubectl create deployment my-app --image=nginx
+Expose the deployment:
+
+kubectl expose deployment my-app --port=80 --type=LoadBalancer
+
+Get the external IP address of the service:
+
+kubectl get service my-app
+Commands Summary
+Here is a summary of the key commands for each method:
+
+Minikube:
+kubectl create deployment hello-node --image=k8s.gcr.io/echoserver:1.4
+kubectl expose deployment hello-node --type=LoadBalancer --port=8080
+minikube service hello-node --url
+
+Azure Kubernetes Service (AKS):
+az aks create --name myResourceGroup --location eastus
+az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 1 --enable-addons monitoring --generate-ssh-keys
+az aks get-credentials --resource-group myResourceGroup --name myAKSCluster
+kubectl create deployment my-app --image=nginx
+kubectl expose deployment my-app --port=80 --type=LoadBalancer
+kubectl get service my-app
+
+update the Cluster
+
+az aks update \
+  --resource-group myResourceGroup \
+  --name myAKSCluster \
+  --enable-cluster-autoscaler \
+  --min-count 3 \
+  --max-count 10
+
+
+
+Splunk :
+Splunk we are Monitoring the Apis dashbaord I am getting some apis in mail i am monitoring the api if i face during the deployment
+time or if api is bouncing Api we are monitoring the Api,I need to go to Dashboard Firstly after i checked api if api is green or alerts
+if coming green the deployment is good or alert red is coming we are bouncing the api and checking the jenkins SCM (Source code management tool)
+ 
+admin role permissions
+
+Create, read, update, delete notification settings (email, VictorOps, Slack and custom webhook)
+Create, read, update, delete groups
+Read, delete entities
+Access and configure all Add Data pages
+Create, read, update, delete alerts
+Save workspaces as dashboards
+
+Power role Permission Permitted to
+Create, read, update, delete groups
+Read, delete entities
+Access and configure all Add Data pages
+Create, read, update, delete email, Slack, and custom webhook alerts
+Read and delete VictorOps alerts
+Save workspaces as dashboards
+
+Not permitted 
+
+Create, read, update, delete notification settings (email, VictorOps, Slack and custom webho
+
+Powershell
+
+
+create resource group
+
+$resourceGroupName = "MyResourceGroup"
+$location = "EastUS"
+
+New-AzResourceGroup -Name $resourceGroupName -Location $location
+
+Delete a Resource Group:
+
+Remove-AzResourceGroup -Name $resourceGroupName -Force
+
+Virtual Networks (VNet)
+Virtual networks are used to connect Azure resources.
+
+create virtual network
+
+$vnetName = "MyVNet"
+$addressPrefix = "10.0.0.0/16"
+$subnetName = "MySubnet"
+$subnetPrefix = "10.0.0.0/24"
+
+$vnet = New-AzVirtualNetwork -ResourceGroupName $resourceGroupName -Location $location -Name $vnetName -AddressPrefix $addressPrefix
+
+Add-AzVirtualNetworkSubnetConfig -Name $subnetName -AddressPrefix $subnetPrefix -VirtualNetwork $vnet
+
+$vnet | Set-AzVirtualNetwork
+
+Virtual Machines (VM)
+Virtual machines are one of the most commonly used Azure resources.
+
+Create a Virtual Machine:
+$vmName = "MyVM"
+$vmSize = "Standard_B1s"
+$adminUsername = "azureuser"
+$adminPassword = ConvertTo-SecureString "P@ssw0rd!" -AsPlainText -Force
+
+$vmConfig = New-AzVMConfig -VMName $vmName -VMSize $vmSize |
+    Set-AzVMOperatingSystem -Windows -ComputerName $vmName -Credential (New-Object PSCredential($adminUsername, $adminPassword)) |
+    Set-AzVMSourceImage -PublisherName "MicrosoftWindowsServer" -Offer "WindowsServer" -Skus "2019-Datacenter" -Version "latest"
+
+New-AzVM -ResourceGroupName $resourceGroupName -Location $location -VM $vmConfig
+
+Storage Accounts
+Storage accounts are used to store data objects in Azure.
+
+Create a Storage Account:
+
+$storageAccountName = "mystorageaccount"
+$skuName = "Standard_LRS"
+
+New-AzStorageAccount -ResourceGroupName $resourceGroupName -AccountName $storageAccountName -Location $location -SkuName 
+$skuName -Kind StorageV2
+
+Creating an Azure Automation Account
+# Define variables
+$resourceGroupName = "MyResourceGroup"
+$automationAccountName = "MyAutomationAccount"
+$location = "EastUS"
+
+# Create a resource group
+New-AzResourceGroup -Name $resourceGroupName -Location $location
+
+# Create an automation account
+New-AzAutomationAccount -ResourceGroupName $resourceGroupName -Name $automationAccountName -Location $location
+
+
+
